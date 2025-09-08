@@ -7,7 +7,7 @@ set "PASSWORD=password"  :: Default password is 'password'
 :MENU
 cls
 echo ================================
-echo        DIGILOCKER SYSTEM
+echo        LOCKMAN SYSTEM
 echo ================================
 echo.
 echo [1] Lock Folder
