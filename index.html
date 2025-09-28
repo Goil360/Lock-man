@@ -1,95 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lockman - Download</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lockman</title>
   <style>
     body {
       margin: 0;
-      padding: 40px 20px;
       font-family: Arial, sans-serif;
-      text-align: center;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
+      /* Restored original background */
+      background: url('background.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #00ffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       min-height: 100vh;
+      text-align: center;
     }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      color: #00ffcc;
-      text-shadow: 0 0 10px #00ffcc;
-    }
-    p.lead {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      color: #d1d1d1;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    a.button {
-      display: inline-block;
-      padding: 15px 40px;
-      font-size: 18px;
+    header {
+      font-size: 3em;
       font-weight: bold;
-      color: white;
-      background: linear-gradient(90deg, #00ffcc, #0066ff);
-      border-radius: 12px;
+      margin-bottom: 50px;
+      border-bottom: 2px solid #00ffff;
+      padding-bottom: 10px;
+      width: 80%;
+    }
+    .buttons {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .btn {
+      background-color: rgba(10,10,10,0.8);
+      color: #00ffff;
+      padding: 20px 40px;
+      font-size: 1.5em;
+      border: 2px solid #00ffff;
+      border-radius: 15px;
       text-decoration: none;
-      box-shadow: 0 0 20px rgba(0,255,204,0.6), 0 0 30px rgba(0,102,255,0.6);
-      transition: transform 0.25s, box-shadow 0.25s;
-      margin: 10px;
+      transition: 0.3s;
     }
-    a.button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 30px rgba(0,255,204,0.8), 0 0 40px rgba(0,102,255,0.8);
+    .btn:hover {
+      background-color: #00ffff;
+      color: #0a0a0a;
+      cursor: pointer;
     }
-    p.note {
-      margin-top: 20px;
-      font-size: 0.95rem;
-      color: #aaa;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
+    .note {
+      font-size: 1em;
+      color: #00cccc;
+      margin-top: 10px;
     }
-    .info {
-      max-width: 700px;
-      margin: 40px auto 0 auto;
-      text-align: left;
-      background: rgba(0, 0, 0, 0.25);
-      padding: 20px;
-      border-radius: 12px;
-      color: #eee;
-      line-height: 1.5;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    .downloads {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
-    .info h2 {
-      color: #00ccff;
-      margin-top: 0;
+    .downloads a {
+      color: #00ffff;
+      text-decoration: none;
+      font-size: 1.2em;
+      border: 2px solid #00ffff;
+      border-radius: 10px;
+      padding: 10px 20px;
+      background-color: rgba(0,0,0,0.6);
+      transition: 0.3s;
     }
-    .info ul, .info ol {
-      margin-left: 20px;
-      margin-bottom: 15px;
+    .downloads a:hover {
+      background-color: #00ffff;
+      color: #0a0a0a;
     }
-    .info li {
-      margin-bottom: 8px;
-    }
-    .small {
-      font-size: 0.9rem;
-      color: #ccc;
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #00cccc;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to Lockman</h1>
-  <p class="lead">A simple folder locker for Windows. Lockman hides a folder and protects it with a password using a small <code>.bat</code> script.</p>
+  <header>Lockman</header>
 
-  <a href="Lockman.bat" download class="button">⬇ Download Lockman (.bat)</a>
-  <a href="Lockman.zip" download class="button">⬇ Download Lockman (ZIP)</a>
+  <div class="buttons">
+    <a class="btn" href="HOW_TO_USE_LINK">How to Use</a>
+    <a class="btn" href="TROUBLESHOOTING_LINK">Troubleshooting</a>
+  </div>
 
-  <p class="note">⚠ Default password is <b>password</b>. You can edit the .bat file to change it before using.</p>
+  <div class="note">
+    Lockman creates a folder named <strong>Locker</strong>. Place the files you want to protect inside it.
+  </div>
 
-  <div class="info" role="region" aria-label="About Lockman">
-    <h2>About Lockman</h2>
-    <p>Lockman is a beginner-friendly folder locker built with a Windows batch script (<code>.bat</code>). It lets you create a folder called <code>Locker</code>, then "lock"s it.it works from windows 95 to the latest version[windows 12]
+  <div class="downloads">
+    <a href="DownloadLokman.zip" download>Download Lockman ZIP</a>
+    <a href="DownloadLokman.bat" download>Download Lockman BAT</a>
+  </div>
+
+  <footer>&copy; 2025 Lockman Project</footer>
+</body>
+</html>
